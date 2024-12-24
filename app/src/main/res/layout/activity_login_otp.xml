@@ -5,32 +5,16 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LoginPhoneActivity"
+    tools:context=".LoginOtpActivity"
     android:orientation="vertical"
     android:gravity="center"
     android:layout_margin="18dp"
     android:weightSum="100">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
         android:layout_weight="10">
-        <RelativeLayout
-            android:layout_width="32dp"
-            android:layout_height="32dp"
-            android:layout_margin="10dp"
-            android:background="@drawable/circular_bg"
-            android:backgroundTint="@color/my_primary">
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_centerInParent="true"
-                android:textColor="@color/my_secondary"
-                android:backgroundTint="@color/off_white"
-                android:textSize="18sp"
-                android:text="1"/>
-        </RelativeLayout>
         <RelativeLayout
             android:layout_width="32dp"
             android:layout_height="32dp"
@@ -42,6 +26,21 @@
                 android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 android:textColor="@color/my_primary"
+                android:backgroundTint="@color/grey"
+                android:textSize="18sp"
+                android:text="1"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/circular_bg"
+            android:backgroundTint="@color/my_primary">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/my_secondary"
                 android:textSize="18sp"
                 android:text="2"/>
         </RelativeLayout>
@@ -69,7 +68,7 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Enter Mobile Number:"
+        android:text="Enter OTP sent to your Number:"
         android:layout_gravity="center_vertical"
         android:letterSpacing="0.08"
         android:textStyle="bold"
@@ -83,24 +82,18 @@
         android:gravity="center"
         android:layout_weight="20">
 
-        <com.hbb20.CountryCodePicker
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-             app:ccp_showNameCode="false"
-            android:id="@+id/login_country_code"/>
-        
         <EditText
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="10dp"
             android:textColor="@color/my_primary"
-            android:hint="Mobile"
-            android:maxLength="11"
+            android:hint="OTP"
             android:inputType="phone"
-            android:id="@+id/login_mobile_number"
+            android:maxLength="6"
+            android:id="@+id/login_otp"
             android:layout_margin="10dp"/>
     </LinearLayout>
-    
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="100dp"
@@ -110,17 +103,26 @@
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Send OTP"
-            android:id="@+id/send_otp_button"
+            android:text="NEXT"
+            android:id="@+id/login_next_button"
             android:textColor="@color/my_secondary"/>
         <ProgressBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:indeterminateTint="@color/my_primary"
             android:layout_gravity="center"
-            android:layout_weight="10"
-            android:id="@+id/login_progress_bar"/>
+            android:id="@+id/login_progress_bar"
+            android:layout_weight="10"/>
     </LinearLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Resend OTP in 30 sec"
+        android:layout_weight="10"
+        android:id="@+id/resend_otp_text"
+        android:gravity="center">
+
+    </TextView>
 
 
 </LinearLayout>
