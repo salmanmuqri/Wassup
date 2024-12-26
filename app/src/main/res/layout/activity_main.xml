@@ -31,7 +31,7 @@
             android:background="?attr/selectableItemBackgroundBorderless"
             app:tint="@color/my_secondary"
             android:layout_centerVertical="true"
-            android:id="@+id/search_button"
+            android:id="@+id/main_search_button"
             android:layout_marginEnd="10dp"/>
 
     </RelativeLayout>

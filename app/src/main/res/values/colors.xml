@@ -6,4 +6,6 @@
     <color name="my_secondary">#C5BEBE</color>
     <color name="off_white">#E7E1B7</color>
     <color name="grey">#B1ACAC</color>
+    <color name="chat_send">#1E88E5</color>
+    <color name="chat_reciever">#88FA0D25</color>
 </resources>
