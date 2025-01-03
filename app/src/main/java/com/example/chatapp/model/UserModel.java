@@ -6,14 +6,15 @@ public class UserModel {
     private String phone;
     private String username;
     private Timestamp createdTimestamp;
-    String userId;
+    private String userId;
+    private String fcmToken;
 
     public UserModel() {
     }
 
-    public UserModel(String username, String phone, Timestamp createdTimestamp,String userId) {
-        this.username = username;
+    public UserModel(String phone, String username, Timestamp createdTimestamp,String userId) {
         this.phone = phone;
+        this.username = username;
         this.createdTimestamp = createdTimestamp;
         this.userId = userId;
     }
@@ -48,5 +49,13 @@ public class UserModel {
 
     public void setUserId(String userId) {
         this.userId = userId;
+    }
+
+    public String getFcmToken() {
+        return fcmToken;
+    }
+
+    public void setFcmToken(String fcmToken) {
+        this.fcmToken = fcmToken;
     }
 }

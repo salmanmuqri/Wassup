@@ -1,16 +1,17 @@
 package com.example.chatapp.model;
 
-import java.util.List;
 import com.google.firebase.Timestamp;
+
+import java.util.List;
 
 public class ChatroomModel {
     String chatroomId;
     List<String> userIds;
     Timestamp lastMessageTimestamp;
     String lastMessageSenderId;
+    String lastMessage;
 
-    public ChatroomModel(){
-
+    public ChatroomModel() {
     }
 
     public ChatroomModel(String chatroomId, List<String> userIds, Timestamp lastMessageTimestamp, String lastMessageSenderId) {
@@ -51,4 +52,13 @@ public class ChatroomModel {
     public void setLastMessageSenderId(String lastMessageSenderId) {
         this.lastMessageSenderId = lastMessageSenderId;
     }
+
+    public String getLastMessage() {
+        return lastMessage;
+    }
+
+    public void setLastMessage(String lastMessage) {
+        this.lastMessage = lastMessage;
+    }
+
 }
